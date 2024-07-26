@@ -5,7 +5,7 @@ open StudentTests.Events
 let studentDb =
     let db = StudentTests.EventDb.EventDbContextFactory().CreateDbContext([||])
     db.Database.Migrate ()
-    StudentTests.Api.StudentDb.create db
+    StudentTests.Api.DataStore.StudentDb.create db
 
 let gid = Guid.Parse("18bc2a0f-99b2-436b-b485-ea6098aff93c")
 

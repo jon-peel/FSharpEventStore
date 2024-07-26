@@ -6,8 +6,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="StudentDb.fs" />
-        <Compile Include="Program.fs"/>
+        <Compile Include="DataStore\Projections.fs" />
+        <Compile Include="DataStore\StudentDb.fs" />
+        <Compile Include="Program.fs" />
     </ItemGroup>
 
     <ItemGroup>
