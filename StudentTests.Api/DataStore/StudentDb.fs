@@ -10,9 +10,9 @@ type IStudentDb =
     abstract member Get: Guid -> Student option
     
 module StudentDb =
-    let projections = Projections.create<Student> ()
+    let projections = Projections.create ()
     
-    let setProjection student = (student.id, student) |> Projections.Set |> projections.Post
+    let setProjection student = student |> Projections.Set |> projections.Post
     
     let create (db: EventDbContext) =
         let get id =
